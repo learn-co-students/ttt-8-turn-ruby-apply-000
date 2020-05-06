@@ -33,7 +33,7 @@ def turn(board)
   else
     move(board,index,"X")
     display_board(board)
-    puts "User inputted #{input}"
+
    end
 
 
