@@ -1,4 +1,5 @@
 #display_board displays the tic-tac-toe board
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -14,14 +15,12 @@ end
 
 #valid_move? checks if the user input is a valid position on the board and if empty
 def valid_move?(board, index)
-  if index.between?(0, 8) && position_taken?(board, index) == false
+  if index.between?(0, 8) && !position_taken?(board, index)
     true
-  else
-    false
   end
 end
 
-#position_taken? checks if user input position is empty
+#position_taken? checks if user input position is taken
 def position_taken?(board, index)
   if board[index] == " " || board[index] == ""  || board[index] == nil
     false
@@ -35,8 +34,8 @@ def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
-  if valid_move?(board, index) == true
-    move(board, index, char = "X")
+  if valid_move?(board, index)
+    move(board, index)
     display_board(board)
   else
     turn(board)
