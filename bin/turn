@@ -5,7 +5,8 @@ require_relative '../lib/turn.rb'
 
 puts board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 puts "Welcome to Tic Tac Toe!"
-puts "Lets get started" 
+puts "!! Lets get started !!"
+display_board(board)
 turn(board)
 
 
