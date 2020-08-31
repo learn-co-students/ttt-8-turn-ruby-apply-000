@@ -31,6 +31,7 @@ def position_taken?(board, index)
   board[index] != " "
 end
 
+
 def turn (board)
   puts "Please enter 1-9:"
   num = gets.chomp
@@ -42,3 +43,6 @@ def turn (board)
     turn(board)
   end
 end
+
+
+
