@@ -70,7 +70,7 @@ Edit `bin/turn`:
 ```ruby
 #!/usr/bin/env ruby
 require_relative '../lib/turn'
-```
+
 
 By adding `require_relative '../lib/turn'` we are telling Ruby to load a file from a relative path to the current file. Since we're in `bin` we have to go up a directory and into `lib` to find `turn.rb`, thus the path `../lib/turn`. **You never need to give the .rb extension to a path for require_relative. Ruby assumes you mean a .rb file.**
 
